@@ -1,6 +1,6 @@
 use std::f32::consts::PI;
 
-use bevy::{prelude::*, transform, ecs::{query, entity}, winit::WinitSettings};
+use bevy::{prelude::*};
 use bevy_rapier2d::prelude::*;
 use rand::random;
 
@@ -460,7 +460,7 @@ fn setup_ui(mut commands: Commands, asset_server: Res<AssetServer>) {
                     text: Text {
                         sections: vec![
                             TextSection {
-                                value: format!("Game Over"),
+                                value: "Game Over".to_string(),
                                 style: TextStyle {
                                     font: asset_server.load("BungeeSpice-Regular.ttf"),
                                     font_size: 40.0,
